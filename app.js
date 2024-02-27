@@ -7,11 +7,14 @@ const PORT = 3000;
 
 // Engine Template;
 app.use(expressLayouts);
-app.set('layouts', './layouts/main.ejs');
+app.set('layout', './layouts/main.ejs');
 app.set('view engine', 'ejs');
 
 // Adding the main routes;
 app.use('/', require('./server/routes/main'));
+
+// Adding the public file;
+app.use(express.static('./public'));
 
 // 404 Page;
 app.use((req, res) => {

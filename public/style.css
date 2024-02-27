@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ffe3ca;
+}
+
+header {
+    display: flex;
+    background-color: #f6f5f5;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav {
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    color: #0c359e;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #0c359e;
+}
+
+.green {
+    background-color: green;
+    color: white;
+}
+
+.red {
+    background-color: red;
+}

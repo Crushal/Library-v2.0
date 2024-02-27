@@ -1,10 +1,29 @@
-<div>
-    <div class="book">
-        <div>
-            <h2>Book Name</h2>
-            <h4>book author</h4>
-            <h4>book pages</h4>
-            <p>Date updated</p>
+<div class="section">
+    <% if (books.length < 0) { %>
+        <div class="add-box">
+            <a href="/add-book" class="button">+</a>
         </div>
-    </div>
+    <% } else { %>
+        <% books.forEach(book => { %>
+            <div class="book">
+                <div>
+                    <h2><%= book.title %></h2>
+                    <h4><%= book.author %></h4>
+                    <h4><%= book.pages %></h4>
+                    <p>Date updated</p>
+                    <div class="controls">
+                        <% if (book.read) { %>
+                            <button class="btn-lg green">Read</button>
+                        <% } else { %>
+                            <button class="btn-lg red">Not Read</button>
+                        <% } %>
+                        <div>
+                            <button>Delete</button>
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        <% }) %>
+    <% } %>
 </div>

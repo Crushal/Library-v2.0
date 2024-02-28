@@ -20,6 +20,10 @@ header {
     color: #0c359e;
 }
 
+.add-box {
+    border: 2px solid black;
+}
+
 a {
     text-decoration: none;
 }

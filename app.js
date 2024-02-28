@@ -1,9 +1,13 @@
+require("dotenv").config();
+
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
+const dbConnect = require('./server/config/db');
 const app = express();
 const PORT = 3000;
 
-
+// Connecting to database;
+dbConnect();
 
 // Engine Template;
 app.use(expressLayouts);

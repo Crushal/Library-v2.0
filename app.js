@@ -20,15 +20,17 @@ app.use('/', require('./server/routes/main'));
 // Adding the public file;
 app.use(express.static('./public'));
 
+// Add book Pages;
+app.get('/add-book', (req, res) => {
+    res.render('add-book', {title : 'Add-Book'});
+})
+
+
 // 404 Page;
 app.use((req, res) => {
     res.render('404', {title : "Error! 404"});
 });
 
-// Add book Pages;
-app.get('/add-book', (req, res) => {
-    res.render('add-book', {title : 'Add-Book'});
-})
 
 // Server Connection;
 app.listen(PORT, () => {

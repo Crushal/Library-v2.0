@@ -25,7 +25,6 @@ app.get('/add-book', (req, res) => {
     res.render('add-book', {title : 'Add-Book'});
 })
 
-
 // 404 Page;
 app.use((req, res) => {
     res.render('404', {title : "Error! 404"});

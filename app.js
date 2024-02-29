@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const dbConnect = require('./server/config/db');
+const methodOR = require('method-override');
 const app = express();
 const PORT = 3000;
 
@@ -13,6 +14,9 @@ dbConnect();
 app.use(expressLayouts);
 app.set('layout', './layouts/main.ejs');
 app.set('view engine', 'ejs');
+
+// Using Method Override;
+app.use(methodOR('_method'));
 
 // Adding the main routes;
 app.use('/', require('./server/routes/main'));

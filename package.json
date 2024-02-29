@@ -6,6 +6,7 @@
     "express-ejs-layouts": "^2.5.1",
     "method-override": "^3.0.0",
     "mongoose": "^8.2.0",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "normalize.css": "^8.0.1"
   }
 }

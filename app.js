@@ -43,7 +43,7 @@ app.get('/edit-book/:id', (req, res) => {
         .catch(err => console.log(err))
 });
 
-// Editing data:
+// Editing data;
 app.put('/edit-blog/:id', (req, res) => {
     const id = req.params.id;
     Book.findByIdAndUpdate(id, {title : req.body.title, author : req.body.author, pages : req.body.pages, read : req.body.read})
@@ -52,6 +52,16 @@ app.put('/edit-blog/:id', (req, res) => {
         })
         .catch(err => console.log(err))
 }) 
+
+// Deleting data;
+app.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    Book.findOneAndDelete(id)
+        .then(() => {
+            res.redirect('/');
+        })
+        .catch(err => console.log(err))
+});
 
 // 404 Page;
 app.use((req, res) => {

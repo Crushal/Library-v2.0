@@ -1,7 +1,7 @@
 <div class="section">
-    <% if (books.length < 0) { %>
-        <div class="add-box">
-            <a href="/add-book" class="button">+</a>
+    <% if (books.length <= 0) { %>
+        <div class="add-book">
+            <div class="add-btn"><a href="/add-book" class="button">+</a></div>
         </div>
     <% } else { %>
         <% books.forEach(book => { %>
@@ -19,13 +19,17 @@
                         <% } %>
                         <div class="controls">
                             <a href="/edit-book/<%= book._id %>">Edit</a>
-                            <form action="#" method="post">
+                            <form action="/<%= book._id%>?_method=DELETE" method="post">
                                 <button type="submit">Delete</button>
                             </form>
                         </div>
                     </div>
                     </div>
             </div>
+
         <% }) %>
     <% } %>
+    <div class="add-book">
+        <div class="add-btn"><a href="/add-book" class="button">+</a></div>
+    </div>
 </div>

@@ -1,27 +1,84 @@
-body{
+html {
+    height: 100%;
+}
+
+body, .main {
     margin: 0;
     padding: 0;
-    background-color: #ffe3ca;
 }
 
 header {
     display: flex;
+    justify-content: center;
+    height: 5%;
     background-color: #f6f5f5;
     width: 100%;
     text-align: center;
-    justify-content: center;
 }
 
+.container{
+    background-color: #ffe3ca;
+    padding: 2%;
+}
+
+
 .nav {
+    font-size: 1.5em;
     font-family: "Jacquarda Bastarda 9", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2em;
     color: #0c359e;
 }
 
-.add-box {
-    border: 2px solid black;
+.section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.book {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    height: 15rem;
+    align-items: center;
+    text-align: center;
+    border: 4px dotted #ee99c2;
+    border-radius: 25px;
+    padding: 2rem;
+}
+
+.add-book{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.add-btn {
+    width: 5rem;
+    height: 4rem;
+    background-color: #3898ec;
+    border-radius: 25px;
+    align-items: center;
+    color: #f6f5f5;
+    cursor: pointer;
+}
+
+.add-btn .button {
+    height: 4rem;
+    color: white;
+    align-self: center;
+    font-size: 3.5em;
+    font-weight: bolder;
+}
+
+.add-btn:hover, .book:hover {
+    transform: scale(1.1);
 }
 
 a {
@@ -39,4 +96,16 @@ a:visited {
 
 .red {
     background-color: red;
+}
+
+footer{
+    padding: 1%;
+    background-color: #f6f5f5;
+    height: 10%;
+    width: 100%;
+}
+.footer div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }

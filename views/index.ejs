@@ -1,5 +1,5 @@
 <div class="section">
-    <% if (books.length <= 0) { %>
+    <% if (books.length < 0) { %>
         <div class="add-box">
             <a href="/add-book" class="button">+</a>
         </div>
@@ -11,15 +11,17 @@
                     <h4><%= book.author %></h4>
                     <h4><%= book.pages %></h4>
                     <p>Date updated</p>
-                    <div class="controls">
+                    <div>
                         <% if (book.read) { %>
                             <button class="btn-lg green">Read</button>
                         <% } else { %>
                             <button class="btn-lg red">Not Read</button>
                         <% } %>
-                        <div>
-                            <a href="/edit-book/<%= book._id %>">Edit
-                            <input type="submit" value="Delete">
+                        <div class="controls">
+                            <a href="/edit-book/<%= book._id %>">Edit</a>
+                            <form action="#" method="post">
+                                <button type="submit">Delete</button>
+                            </form>
                         </div>
                     </div>
                     </div>
